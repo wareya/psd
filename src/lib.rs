@@ -39,6 +39,7 @@ mod sections;
 
 pub use crate::sections::layer_and_mask_information_section::layer::*;
 pub use crate::sections::layer_and_mask_information_section::*;
+pub use self::sections::PsdCursor;
 
 /// An list of errors returned when processing PSD file.
 ///
