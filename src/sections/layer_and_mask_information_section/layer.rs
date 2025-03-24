@@ -188,9 +188,9 @@ pub struct PsdLayer {
     /// channel, or you might make use of the layer masks.
     ///
     /// Storing the channels separately allows for this flexability.
-    pub(crate) channels: LayerChannels,
+    pub channels: LayerChannels,
     /// Common layer properties
-    pub(crate) layer_properties: LayerProperties,
+    pub layer_properties: LayerProperties,
 }
 
 /// An error when working with a PsdLayer
@@ -209,7 +209,7 @@ pub enum PsdLayerError {
     InvalidCompression { compression: u16 },
 }
 
-impl PsdLayer {
+pub impl PsdLayer {
     /// Create a new photoshop layer
     pub fn new(
         layer_record: &LayerRecord,
@@ -367,7 +367,7 @@ impl BlendMode {
 #[derive(Debug, Clone)]
 pub struct LayerRecord {
     /// The name of the layer
-    pub(super) name: String,
+    pub name: String,
     /// The channels that this record has and the number of bytes in each channel.
     ///
     /// Each channel has one byte per pixel in the PSD.
@@ -375,25 +375,25 @@ pub struct LayerRecord {
     /// So a 1x1 image would have 1 byte per channel.
     ///
     /// A 2x2 image would have 4 bytes per channel.
-    pub(super) channel_data_lengths: Vec<(PsdChannelKind, u32)>,
+    pub channel_data_lengths: Vec<(PsdChannelKind, u32)>,
     /// The position of the top of the image
-    pub(super) top: i32,
+    pub top: i32,
     /// The position of the left of the image
-    pub(super) left: i32,
+    pub left: i32,
     /// The position of the bottom of the image
-    pub(super) bottom: i32,
+    pub bottom: i32,
     /// The position of the right of the image
-    pub(super) right: i32,
+    pub right: i32,
     /// If true, the layer is marked as visible
-    pub(super) visible: bool,
+    pub visible: bool,
     /// The opacity of the layer
-    pub(super) opacity: u8,
+    pub opacity: u8,
     /// If true, the layer is clipping mask
-    pub(super) clipping_base: bool,
+    pub clipping_base: bool,
     /// Blending mode of the layer
-    pub(super) blend_mode: BlendMode,
+    pub blend_mode: BlendMode,
     /// Group divider tag
-    pub(super) divider_type: Option<GroupDivider>,
+    pub divider_type: Option<GroupDivider>,
 }
 
 impl LayerRecord {
