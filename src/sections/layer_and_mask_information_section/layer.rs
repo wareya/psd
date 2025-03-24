@@ -267,7 +267,7 @@ impl Deref for PsdLayer {
 
 /// GroupDivider represents tag type of Section divider.
 #[derive(Debug, Clone)]
-pub(super) enum GroupDivider {
+pub enum GroupDivider {
     /// 0 = any other type of layer
     Other = 0,
     /// 1 = open "folder"
