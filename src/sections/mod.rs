@@ -106,7 +106,7 @@ fn read_major_section_start_end(cursor: &mut PsdCursor) -> (usize, usize) {
 /// A Cursor wrapping bytes from a PSD file.
 ///
 /// Provides methods that abstract common ways of parsing PSD bytes.
-pub(crate) struct PsdCursor<'a> {
+pub struct PsdCursor<'a> {
     cursor: Cursor<&'a [u8]>,
 }
 
