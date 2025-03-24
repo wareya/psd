@@ -37,6 +37,8 @@ mod psd_channel;
 mod render;
 mod sections;
 
+pub use crate::sections::layer_and_mask_information_section::layer::*;
+
 /// An list of errors returned when processing PSD file.
 ///
 /// This list is intended to grow over time and it is not recommended to exhaustively match against it.
