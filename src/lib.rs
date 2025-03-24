@@ -30,6 +30,8 @@ pub use crate::sections::layer_and_mask_information_section::layer::PsdLayer;
 use crate::sections::layer_and_mask_information_section::LayerAndMaskInformationSection;
 use crate::sections::MajorSections;
 
+pub use crate::sections::image_data_section::ChannelBytes;
+
 use self::sections::file_header_section::FileHeaderSection;
 
 mod blend;
