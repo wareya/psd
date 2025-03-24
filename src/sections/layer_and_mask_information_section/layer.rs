@@ -252,7 +252,7 @@ impl PsdLayer {
     }
 
     // Get one of the PsdLayerChannels of this PsdLayer
-    fn get_channel(&self, channel: PsdChannelKind) -> Option<&ChannelBytes> {
+    pub fn get_channel(&self, channel: PsdChannelKind) -> Option<&ChannelBytes> {
         self.channels.get(&channel)
     }
 }
