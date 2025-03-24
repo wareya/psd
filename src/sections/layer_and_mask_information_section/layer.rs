@@ -209,7 +209,7 @@ pub enum PsdLayerError {
     InvalidCompression { compression: u16 },
 }
 
-pub impl PsdLayer {
+impl PsdLayer {
     /// Create a new photoshop layer
     pub fn new(
         layer_record: &LayerRecord,
