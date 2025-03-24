@@ -255,7 +255,7 @@ impl LayerAndMaskInformationSection {
 }
 
 /// Reads layer channels
-fn read_layer_channels(
+pub fn read_layer_channels(
     cursor: &mut PsdCursor,
     channel_data_lengths: &Vec<(PsdChannelKind, u32)>,
     scanlines: usize,
