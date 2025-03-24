@@ -17,7 +17,7 @@ use sections::image_data_section::ImageDataSectionError;
 use sections::image_resources_section::ImageResourcesSectionError;
 use sections::layer_and_mask_information_section::layer::PsdLayerError;
 
-pub use crate::psd_channel::IntoRgba;
+use crate::psd_channel::IntoRgba;
 pub use crate::psd_channel::{PsdChannelCompression, PsdChannelKind};
 pub use crate::sections::file_header_section::{ColorMode, PsdDepth};
 use crate::sections::image_data_section::ChannelBytes;
@@ -38,6 +38,7 @@ mod render;
 mod sections;
 
 pub use crate::sections::layer_and_mask_information_section::layer::*;
+pub use crate::psd_channel;
 
 /// An list of errors returned when processing PSD file.
 ///
