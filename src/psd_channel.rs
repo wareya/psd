@@ -115,7 +115,7 @@ pub trait IntoRgba {
     ///
     /// Doing it this way allows us to allocate for one vector and insert all 4 (RGBA) channels into
     /// it.
-    pub fn insert_channel_bytes(
+    fn insert_channel_bytes(
         &self,
         rgba: &mut Vec<u8>,
         channel_kind: PsdChannelKind,
